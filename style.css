@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#score {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#subnet-mask-label {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#subnet-mask-label + label {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#next-button {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin: 0 auto;
+}
+
+#answer-input {
+  border: none;
+  border-bottom: 2px solid #0077FF;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding: 3px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+label[for="answer-input"] {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+}
+
+
+#submit-button {
+  background-color: #0077FF;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+#explanation {
+  color: #FF0000;
+  display: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}

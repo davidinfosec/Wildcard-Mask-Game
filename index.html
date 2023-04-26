@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Wildcard Mask Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Wildcard Mask Game</h1>
+      <label for="answer-input">What is the wildcard mask of:</label>
+      <div id="subnet-mask-label"></div>
+
+      <div class="card">
+        <h2 id="subnet-mask-label"></h2>
+        <form id="subnet-form">
+          <input type="text" id="answer-input" placeholder="Enter wildcard mask" required>
+          <button type="button" id="submit-button">Submit</button>
+          <button type="button" id="next-button" style="display:none">Next</button>
+        </form>
+        <div id="explanation"></div>
+      </div>
+
+      <div id="score">Score: 0</div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
