@@ -15,6 +15,7 @@ const placeholderLength = input.getAttribute('placeholder').length;
 const resultMessage = document.getElementById('result-message');
 const body = document.querySelector('body');
 
+
 input.style.width = `${placeholderLength}ch`;
 
 // Function to generate a random subnet mask
