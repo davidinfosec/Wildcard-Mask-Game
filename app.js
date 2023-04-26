@@ -12,8 +12,10 @@ const explanation = document.getElementById('explanation');
 const scoreLabel = document.getElementById('score');
 const input = document.getElementById('answer-input');
 const placeholderLength = input.getAttribute('placeholder').length;
-input.style.width = `${placeholderLength}ch`;
+const resultMessage = document.getElementById('result-message');
+const body = document.querySelector('body');
 
+input.style.width = `${placeholderLength}ch`;
 
 // Function to generate a random subnet mask
 function generateSubnetMask() {
@@ -62,8 +64,10 @@ function generateWildcardMask(subnetMask) {
   const subnetMaskOctets = subnetMask.split('.');
   const wildcardMaskOctets = subnetMaskOctets.map(octet => 255 - parseInt(octet));
   return wildcardMaskOctets.join('.');
+ 
 }
 
+// Function to check the user's answer and update the score
 // Function to check the user's answer and update the score
 function checkAnswer() {
   if (!isAnswerCorrect) {
@@ -79,12 +83,18 @@ function checkAnswer() {
       explanation.textContent = '';
       explanation.style.display = 'none';
       answerInput.disabled = true;
+      resultMessage.textContent = "You got it right!";
+      resultMessage.style.color = "green";
     } else {
       explanation.textContent = `Sorry, the correct answer is ${correctAnswer}.`;
       explanation.style.display = 'block';
       answerInput.disabled = true;
       submitButton.style.display = 'none';
       nextButton.style.display = 'inline-block';
+      resultMessage.textContent = "You got it wrong.";
+      resultMessage.style.color = "red";
+	  resultMessage.style.display = "block";
+	  resultMessage.style.textAlign = "center";
     }
   } else {
     generateNewSubnetMask();
@@ -95,9 +105,9 @@ function checkAnswer() {
     isAnswerCorrect = false;
     submitButton.style.display = 'inline-block';
     nextButton.style.display = 'none';
+    resultMessage.textContent = '';
   }
 }
-
 
 // Function to generate a new subnet mask and update the DOM
 function generateNewSubnetMask() {
@@ -109,7 +119,9 @@ function generateNewSubnetMask() {
   answerInput.disabled = false;
   submitButton.style.display = 'inline-block';
   nextButton.style.display = 'none';
+  resultMessage.textContent = ''; // add this line
 }
+
 
 // Initialize the game
 generateNewSubnetMask();

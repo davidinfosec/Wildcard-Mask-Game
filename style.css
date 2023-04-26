@@ -2,6 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height:100vh;
+  /*background-color: black;*/
 }
 
 #container {
@@ -17,14 +22,27 @@ h1 {
 
 .card {
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color:;
 }
+
+#result-message {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
 
 #score {
   font-size: 24px;
   font-weight: bold;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -43,30 +61,50 @@ h1 {
   margin-bottom: 20px;
 }
 
+#subnet-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -30px;
+}
+
+
 #next-button {
   background-color: #2196f3;
   color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
+  margin-top: 30px;
   cursor: pointer;
-  margin-left: 10px;
-  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
 }
+
+#next-button:hover {
+  background-color: #0077FF;
+}
+
+#next-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#next-button:active {
+  transform: scale(0.95);
+}
+
 
 #answer-input {
   border: none;
   border-bottom: 2px solid #0077FF;
-  font-size: 24px;
-  margin-bottom: 20px;
-  padding: 3px;
+  font-size: 40px;
+  margin-bottom: 10px;
+  padding: 20px;
   width: 100%;
   text-align: center;
-  display: block;
   margin: 0 auto;
 }
-
-
 
 label[for="answer-input"] {
   display: block;
@@ -75,7 +113,6 @@ label[for="answer-input"] {
   text-align: center;
   margin: 20px auto;
 }
-
 
 #submit-button {
   background-color: #0077FF;
@@ -86,14 +123,70 @@ label[for="answer-input"] {
   font-size: 24px;
   margin-bottom: 20px;
   margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
   padding: 10px;
   width: 100%;
+  transition: background-color 0.3s ease-in-out;
 }
 
 #explanation {
   color: #FF0000;
   display: none;
   font-size: 18px;
+  margin-top: 15px;
   margin-bottom: 20px;
   text-align: center;
 }
+
+#submit-button:hover {
+  background-color: #005CE6;
+  transition: background-color 0.5s ease;
+}
+
+/* .mode-switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.mode-toggle {
+  display: none;
+}
+
+.mode-toggle-label {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.mode-toggle:checked + .mode-toggle-label {
+  background-color: #2196f3;
+}
+
+.mode-toggle-label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mode-toggle:checked + .mode-toggle-label::before {
+  transform: translateX(26px);
+}
+
+.mode-toggle:checked + .mode-toggle-label + body {
+  background-color: white; /* Change this to the desired background color */
