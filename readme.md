@@ -1,10 +1,9 @@
 # Wildcard Mask Game
 ![Subnet Wildcard Game Screenshot](https://i.imgur.com/0JzfExc.png "Subnet Wildcard Game Screenshot")
-
 Welcome to the Wildcard Mask Game, a fun tool to help you practice calculating wildcard masks from subnet masks, an essential skill for your CCNA study. 
 
 ## How to Play
-
+Live Preview at https://davidinfosec.github.io/Wildcard-Mask-Game/
 1. A randomly chosen subnet mask from a list is provided.
 2. Calculate the wildcard mask for that subnet mask.
 3. Enter your answer in the input field.
