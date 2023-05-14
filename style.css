@@ -144,6 +144,23 @@ label[for="answer-input"] {
   transition: background-color 0.5s ease;
 }
 
+#davidinfosec {
+  text-align: center;
+  margin-top: 20px;
+  color: #888888;
+}
+
+#davidinfosec a {
+  color: #888888;
+  text-decoration: none;
+}
+
+#davidinfosec a:hover {
+  color: #0077FF;
+  text-decoration: underline;
+}
+
+
 /* .mode-switch-container {
   display: flex;
   align-items: center;
